@@ -1,0 +1,27 @@
+﻿@page
+@model WebRegistrace.Pages.Uzivatele.IndexModel
+@{
+}
+
+
+<br>
+
+<h2>Seznam</h2>
+<a class='btn btn-primary btn-sm' href='/Registrace'>Novy Uzivatel</a>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>login</th>
+            <th>heslo</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listUzivatelu)
+        {
+            
+        }
+
+    </tbody>
+    </table>
