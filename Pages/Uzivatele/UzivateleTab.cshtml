@@ -2,18 +2,40 @@
 @model WebRegistrace.Pages.Uzivatele.IndexModel
 @{
 }
+<style>
+    body {
+        background-color: #b0c4de;
+    }
 
+    thead {
+        color: green;
+    }
+
+    tbody {
+        color: black;
+    }
+
+   
+  
+
+    
+</style>
 
 <br>
 
-<h2>Seznam</h2>
-<a class='btn btn-primary btn-sm' href='/Uzivatele/Registrace'>Novy Uzivatel</a>
+
+<h1 style="color: MediumSeaGreen;">Seznam uživatelů</h1>
+
+
+<a class='btn btn-primary btn-lg' href='/Uzivatele/Registrace'>Nový Uživatel</a>
+
 <table class="table">
+    
     <thead>
         <tr>
 
-            <th>login</th>
-            <th>heslo</th>
+            <th>Login</th>
+            <th>Heslo</th>
             
         </tr>
     </thead>
@@ -21,7 +43,8 @@
         @foreach (var item in Model.listUzivatelu)
         {
             <tr>
-            <td>@item.login</td>
+                
+                <td>@item.login</td>
             <td>@item.heslo</td>
             
             

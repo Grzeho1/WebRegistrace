@@ -1,0 +1,29 @@
+﻿
+@page
+@using System.Data.SqlClient
+@{
+
+    try
+    {
+        string login = Request.Query["login"];
+
+        String connectionString = "Data Source=TOMAS;Initial Catalog=Projekt;Integrated Security=True";
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+            string query = "DELETE FROM Login WHERE login = @login";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("login", login);
+                command.ExecuteNonQuery();
+            }
+                }
+            }
+            catch (Exception)
+            {
+
+             
+            }
+            Response.Redirect("/Uzivatele/Index");
+}

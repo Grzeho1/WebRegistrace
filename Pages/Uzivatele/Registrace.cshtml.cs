@@ -32,6 +32,7 @@ namespace WebRegistrace.Pages
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
+                  
                     string query = "INSERT INTO Login " + "(login,heslo) VALUES" + "(@login,@heslo);";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
