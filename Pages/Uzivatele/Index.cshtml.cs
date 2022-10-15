@@ -37,6 +37,7 @@ namespace WebRegistrace.Pages.Uzivatele
             {
 
             }
+            
         }
 
         public class Uzivatel

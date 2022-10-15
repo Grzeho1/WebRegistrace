@@ -7,7 +7,7 @@
 <br>
 
 <h2>Seznam</h2>
-<a class='btn btn-primary btn-sm' href='/Registrace'>Novy Uzivatel</a>
+<a class='btn btn-primary btn-sm' href='/Uzivatele/Registrace'>Novy Uzivatel</a>
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +20,15 @@
     <tbody>
         @foreach (var item in Model.listUzivatelu)
         {
+            <tr>
+            <td>@item.login</td>
+            <td>@item.heslo</td>
             
+            
+            <td>
+            <a class="btn btn-primary btn-sm"href="/Uzivatele/Smazat?login=@item.login">Smazat</a>
+            </td>
+            </tr>
         }
 
     </tbody>

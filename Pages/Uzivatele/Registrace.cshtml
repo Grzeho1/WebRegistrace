@@ -1,16 +1,15 @@
 ﻿@page
 @model WebRegistrace.Pages.RegistraceModel
 
-
+<br>
 <h1>Registrace </h1>
 
-@if(Model.heslo!=""&& Model.login!="")
+
+@if (Model.error.Length>0)
 {
-   <p>Registrace uživatele @Model.login proběhla ůspěšně</p>
-}
-else
-{
-    <p>Registrace neproběhla</p>
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        <strong>@Model.error</strong>
+    </div>
 }
 
 
@@ -30,5 +29,5 @@ else
        </form>
        </div>
 
-
+       
      
