@@ -35,7 +35,7 @@ namespace WebRegistrace.Pages.Uzivatele
             }
             catch (Exception ex)
             {
-
+              
             }
             
         }

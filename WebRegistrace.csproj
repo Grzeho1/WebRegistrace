@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Img\image.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Img\image.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
   </ItemGroup>
 

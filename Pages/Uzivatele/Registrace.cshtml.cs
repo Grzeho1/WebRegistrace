@@ -22,7 +22,7 @@ namespace WebRegistrace.Pages
 
             if (uzivatel.login == "" || uzivatel.heslo == "")
             {
-                error = "xxx";
+                error = "Pole nebyly vyplnìny";
                 return;
             }
 
